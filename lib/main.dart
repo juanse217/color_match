@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,8 +39,9 @@ class HomeScreen extends StatelessWidget {
                   overlayColor: WidgetStateProperty.resolveWith<Color?>((
                     Set<WidgetState> states,
                   ) {
-                    if (states.contains(WidgetState.pressed))
+                    if (states.contains(WidgetState.pressed)) {
                       return Colors.black.withGreen(122);
+                    }
                     return null;
                   }),
                 ),
