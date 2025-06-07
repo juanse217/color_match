@@ -22,8 +22,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
-      appBar: AppBar(backgroundColor: Colors.black54),
+      backgroundColor: Colors.blue[900],
+      appBar: AppBar(backgroundColor: Colors.blue[900]),
       body: Center(
         child: Column(
           children: [
@@ -34,6 +34,7 @@ class HomeScreen extends StatelessWidget {
               height: 50,
               child: TextButton(
                 style: ButtonStyle(
+                  
                   foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
                   backgroundColor: WidgetStatePropertyAll(Colors.green),
                   overlayColor: WidgetStateProperty.resolveWith<Color?>((
