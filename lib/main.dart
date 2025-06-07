@@ -1,4 +1,4 @@
-import 'package:color_match/levels.dart';
+import 'package:color_match/menu.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,8 +37,8 @@ class HomeScreen extends StatelessWidget {
                   foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
                   backgroundColor: WidgetStatePropertyAll(Colors.green),
                   overlayColor: WidgetStateProperty.resolveWith<Color?>((
-                    Set<WidgetState> states,
-                  ) {
+                      Set<WidgetState> states,
+                      ) {
                     if (states.contains(WidgetState.pressed)) {
                       return Colors.black.withGreen(122);
                     }
@@ -50,12 +50,12 @@ class HomeScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return Levels();
+                        return Menu();
                       },
                     ),
                   );
                 },
-                child: Text("Play"),
+                child: Text("Empezar"),
               ),
             ),
           ],
