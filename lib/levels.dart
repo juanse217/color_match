@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:color_match/menu.dart';
 
 class Levels extends StatelessWidget {
   const Levels({super.key});
@@ -12,7 +13,21 @@ class Levels extends StatelessWidget {
         brightness: Brightness.light,
       ),
       home: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+            leading:IconButton(
+                icon:Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Menu();
+                      },
+                    ),
+                  );
+                }
+            )
+        ),
         body: Center(
           child: Column(
             children: [
@@ -35,7 +50,7 @@ class Levels extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 100),
+                margin: EdgeInsets.only(top: 50),
                 width: 300,
                 height: 65,
                 child: TextButton(
@@ -48,7 +63,7 @@ class Levels extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 100),
+                margin: EdgeInsets.only(top: 50),
                 width: 300,
                 height: 65,
                 child: TextButton(
